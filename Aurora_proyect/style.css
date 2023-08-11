@@ -18,6 +18,10 @@
     --bg-color: #fff;
 }
 
+*{
+    text-decoration: none;
+}
+
 img{
     width: 100%;
     
@@ -26,6 +30,9 @@ img{
 body{
     color: var(--text-color);
     font-family: 'Poppins', sans-serif;
+    background: rgb(251,153,200);
+    background: linear-gradient(0deg, rgba(251,153,200,1) 0%, rgba(245,236,236,1) 93%);
+    
 }
 
 .container{
@@ -47,6 +54,10 @@ header{
     background: var(--bg-color);
     box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
     z-index: 100;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
 }
 
 .nav{
@@ -54,11 +65,22 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
+    color: #e84393; 
+}
+
+.navbar a{
+    font-size: 1rem;
+    padding:0 1.5rem;
+    color: #667;
+}
+
+.navbar a:hover{
+    color:var(--pink)
 }
 
 .logo{
     font-size: 1.8rem;
-    color: var(--text-color);
+    color: #e84393;
     font-weight: 400;
 }
 
@@ -175,6 +197,7 @@ header{
     font-weight: 600;
     text-align: center;
     margin-bottom: 1,5rem;
+    color: #e84393;
 }
 
 .shop {
@@ -222,7 +245,7 @@ header{
     position: absolute;
     bottom: 0;
     right: 0;
-    background: var(--text-color);
+    background-color: #e84393;
     color: var(--bg-color);
     padding: 10px;
     cursor: pointer;
@@ -261,6 +284,9 @@ header{
     .cart{
         width: 320px;
     }
+    .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
 }
 
 @media (max-width: 1360px){
@@ -269,5 +295,11 @@ header{
     }
     .card{
         width: 280px;
+    }
+}
+
+@media (max-width: 470px){
+    .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 }
